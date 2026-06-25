@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { FormEvent, useMemo, useState } from "react";
 
 const contactEmail = "falias1991@icloud.com";
@@ -166,24 +167,31 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="rounded-[2rem] border border-white/10 bg-gradient-to-br from-white/[0.10] to-white/[0.03] p-6 shadow-2xl shadow-emerald-950/30 backdrop-blur">
-            <div className="rounded-[1.5rem] border border-white/10 bg-black/55 p-6">
-              <div className="mb-8 flex items-center justify-between text-sm text-neutral-400">
-                <span>LOCAL AI VAULT</span>
-                <span className="rounded-full bg-emerald-300/10 px-3 py-1 text-emerald-100">Offline Ready</span>
-              </div>
-              <div className="space-y-4">
-                {[
-                  "No internet required",
-                  "Private local vault",
-                  "Multi-terabyte options",
-                  "Optional off-grid power",
-                ].map((item) => (
-                  <div key={item} className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/[0.04] p-4">
-                    <span className="h-2.5 w-2.5 rounded-full bg-emerald-300 shadow-[0_0_18px_rgba(110,231,183,0.9)]" />
-                    <span className="text-neutral-100">{item}</span>
+          <div className="rounded-[2rem] border border-white/10 bg-gradient-to-br from-white/[0.10] to-white/[0.03] p-3 shadow-2xl shadow-emerald-950/30 backdrop-blur">
+            <div className="relative min-h-[460px] overflow-hidden rounded-[1.6rem] border border-white/10 bg-black/55">
+              <Image
+                src="/images/offgrid/offgrid-solar.png"
+                alt="OffGrid AI solar-ready field setup"
+                fill
+                priority
+                sizes="(max-width: 1024px) 100vw, 42vw"
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/25 to-transparent" />
+              <div className="absolute inset-x-0 bottom-0 p-6">
+                <div className="flex items-center justify-between gap-4 rounded-3xl border border-white/10 bg-black/60 p-4 backdrop-blur">
+                  <div>
+                    <p className="text-xs uppercase tracking-[0.32em] text-neutral-300">
+                      Local AI Vault
+                    </p>
+                    <p className="mt-2 text-lg font-semibold text-white">
+                      Built for offline control.
+                    </p>
                   </div>
-                ))}
+                  <span className="shrink-0 rounded-full bg-emerald-300/10 px-3 py-1 text-sm text-emerald-100">
+                    Offline Ready
+                  </span>
+                </div>
               </div>
             </div>
           </div>
@@ -210,6 +218,30 @@ export default function Home() {
           </SectionCard>
         </section>
 
+        <section className="grid items-center gap-8 rounded-[2rem] border border-white/10 bg-white/[0.04] p-5 shadow-2xl shadow-black/20 sm:p-8 lg:grid-cols-[0.95fr_1.05fr]" id="anywhere">
+          <div>
+            <p className="text-sm uppercase tracking-[0.35em] text-emerald-200/80">
+              Built to move
+            </p>
+            <h2 className="mt-3 max-w-2xl text-3xl font-semibold tracking-tight sm:text-5xl">
+              Built for anywhere your files need to go.
+            </h2>
+            <p className="mt-5 max-w-2xl text-lg leading-8 text-neutral-300">
+              From Dallas to Davao. Austin to Australia. Private AI built for homes, offices, travel, remote work, and off-grid setups.
+            </p>
+          </div>
+          <div className="relative min-h-[320px] overflow-hidden rounded-[1.5rem] border border-emerald-300/20 bg-black/40">
+            <Image
+              src="/images/offgrid/offgrid-antenna-signal.png"
+              alt="OffGrid AI antenna signal setup"
+              fill
+              sizes="(max-width: 1024px) 100vw, 48vw"
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+          </div>
+        </section>
+
         <section className="py-16" id="how-it-works">
           <div className="mb-8 max-w-2xl">
             <p className="text-sm uppercase tracking-[0.35em] text-sky-200/80">How It Works</p>
@@ -231,10 +263,21 @@ export default function Home() {
             <h2 className="mt-3 text-3xl font-semibold tracking-tight sm:text-5xl">Founding preorder is open.</h2>
             <p className="mt-5 text-neutral-300">Reserve early access.</p>
           </div>
-          <div className="rounded-[2rem] border border-emerald-300/20 bg-gradient-to-br from-emerald-300/10 via-white/[0.05] to-white/[0.03] p-6 shadow-2xl shadow-emerald-950/20">
-            <p className="text-sm uppercase tracking-[0.35em] text-emerald-200/80">
-              Founding preorder
-            </p>
+          <div className="relative overflow-hidden rounded-[2rem] border border-emerald-300/20 bg-gradient-to-br from-emerald-300/10 via-white/[0.05] to-white/[0.03] p-6 shadow-2xl shadow-emerald-950/20">
+            <div className="absolute right-4 top-4 h-24 w-24 overflow-hidden rounded-3xl border border-white/10 bg-black/30 opacity-80 sm:h-32 sm:w-32">
+              <Image
+                src="/images/offgrid/offgrid-box-preorder.png"
+                alt="OffGrid AI preorder box"
+                fill
+                sizes="128px"
+                className="object-cover"
+              />
+            </div>
+            <div className="relative pr-24 sm:pr-36">
+              <p className="text-sm uppercase tracking-[0.35em] text-emerald-200/80">
+                Founding preorder
+              </p>
+            </div>
             <h3 className="mt-4 text-3xl font-semibold tracking-tight text-white sm:text-4xl">
               $499 Founding Preorder
             </h3>
