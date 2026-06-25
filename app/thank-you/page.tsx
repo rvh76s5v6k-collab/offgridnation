@@ -1,17 +1,10 @@
 import Link from "next/link";
 
-const nextSteps = [
-  "We review your preorder.",
-  "We confirm whether your build is personal, family, or business.",
-  "We discuss files, storage, device, privacy, and optional solar/off-grid needs.",
-  "We quote the final setup.",
-];
-
 const preorderHighlights = [
   "We will review your preorder.",
-  "Austin / OffGrid Nation will follow up about your use case, device needs, storage needs, and timeline.",
+  "We will follow up about your use case, device, storage, and timeline.",
   "Your $499 preorder is credited toward your future setup.",
-  "Founding customers receive priority access and founder pricing, up to 30% off the final custom build quote.",
+  "Founding customers receive priority access and founder pricing.",
 ];
 
 export default function ThankYouPage() {
@@ -41,8 +34,7 @@ export default function ThankYouPage() {
               Your OffGrid AI founding preorder is reserved.
             </h1>
             <p className="mt-7 max-w-2xl text-lg leading-8 text-neutral-300 sm:text-xl">
-              Thank you for reserving early access to a private AI system that
-              works without internet.
+              Thank you for reserving early access to private AI that works without internet.
             </p>
 
             <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
@@ -90,31 +82,6 @@ export default function ThankYouPage() {
               </div>
             </div>
           </aside>
-        </section>
-
-        <section className="mb-14 rounded-[2rem] border border-white/10 bg-gradient-to-br from-white/[0.08] via-white/[0.04] to-emerald-300/10 p-6 shadow-2xl shadow-black/30 sm:p-8 lg:p-10">
-          <div className="mb-8 max-w-2xl">
-            <p className="text-sm uppercase tracking-[0.35em] text-sky-200/80">
-              What happens next
-            </p>
-            <h2 className="mt-3 text-3xl font-semibold tracking-tight sm:text-5xl">
-              A clear path to your private AI vault.
-            </h2>
-          </div>
-
-          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-            {nextSteps.map((step, index) => (
-              <article
-                className="rounded-3xl border border-white/10 bg-black/35 p-5"
-                key={step}
-              >
-                <span className="text-sm font-semibold text-emerald-200">
-                  0{index + 1}
-                </span>
-                <p className="mt-4 leading-7 text-neutral-200">{step}</p>
-              </article>
-            ))}
-          </div>
         </section>
       </div>
     </main>
