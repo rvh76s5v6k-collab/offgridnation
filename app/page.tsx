@@ -87,6 +87,26 @@ const optionalInterests = [
   "Business pilot",
   "Family/private household setup",
   "Remote cabin / RV / travel use",
+  "OffGrid VaultKey USB starter kit",
+];
+
+const vaultKeyBullets = [
+  "Offline starter files + setup guide",
+  "Private vault templates",
+  "Helps prepare your files for a full OffGrid AI setup",
+  "Not a full custom AI appliance",
+];
+
+const vaultKeyComparison = [
+  {
+    title: "VaultKey USB",
+    description: "Starter kit, templates, prep, portable reference.",
+  },
+  {
+    title: "Custom OffGrid AI Vault",
+    description:
+      "Done-for-you private local AI system built around your files, device, storage, workflow, and offline needs.",
+  },
 ];
 
 const faqs = [
@@ -109,6 +129,11 @@ const faqs = [
     question: "Is this legal privacy?",
     answer:
       "Yes, it is built for lawful privacy and responsible local AI use.",
+  },
+  {
+    question: "Is the VaultKey USB the same as a full OffGrid AI build?",
+    answer:
+      "No. The VaultKey USB is a starter kit for organizing and preparing your private vault. The full OffGrid AI build is a custom local AI system built around your files, hardware, storage, and offline needs.",
   },
 ];
 
@@ -282,6 +307,39 @@ export default function Home() {
                 <p className="mt-4 text-neutral-200">{step}</p>
               </div>
             ))}
+          </div>
+        </section>
+
+        <section className="py-16" id="vaultkey-usb">
+          <div className="rounded-[2rem] border border-white/10 bg-gradient-to-br from-white/[0.08] via-emerald-300/[0.06] to-sky-300/[0.06] p-6 shadow-2xl shadow-emerald-950/20 sm:p-8 lg:p-10">
+            <div className="grid gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
+              <div>
+                <p className="text-sm uppercase tracking-[0.35em] text-emerald-200/80">STARTER OPTION COMING SOON</p>
+                <h2 className="mt-4 text-3xl font-semibold tracking-tight text-white sm:text-5xl">OffGrid VaultKey USB.</h2>
+                <p className="mt-5 max-w-2xl text-lg leading-8 text-neutral-300">
+                  A pocket starter kit for people who want to begin organizing a private offline vault before moving into a full custom OffGrid AI setup.
+                </p>
+                <ul className="mt-6 grid gap-3 text-neutral-200">
+                  {vaultKeyBullets.map((bullet) => (
+                    <li key={bullet} className="flex gap-3 rounded-2xl border border-white/10 bg-black/25 p-4">
+                      <span className="mt-2 h-2 w-2 shrink-0 rounded-full bg-emerald-300 shadow-[0_0_16px_rgba(110,231,183,0.75)]" />
+                      <span>{bullet}</span>
+                    </li>
+                  ))}
+                </ul>
+                <p className="mt-6 font-medium text-emerald-100">Start small. Upgrade when you’re ready.</p>
+                <WaitlistButton className="mt-6 rounded-full bg-white px-7 py-4 font-semibold text-black transition hover:bg-emerald-100" onClick={() => setIsWaitlistOpen(true)} />
+              </div>
+
+              <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-1">
+                {vaultKeyComparison.map((item) => (
+                  <article key={item.title} className="rounded-3xl border border-white/10 bg-black/35 p-5">
+                    <h3 className="text-lg font-semibold text-white">{item.title}</h3>
+                    <p className="mt-3 leading-7 text-neutral-300">{item.description}</p>
+                  </article>
+                ))}
+              </div>
+            </div>
           </div>
         </section>
 
