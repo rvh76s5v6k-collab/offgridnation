@@ -1,12 +1,13 @@
 const contactEmail = "mailto:falias1991@icloud.com";
 
-const offerings = [
-  "$100 refundable reservation",
-  "$750–$1,500 setup on your existing laptop",
-  "$2,500–$5,000 personal custom device",
-  "$5,000 business pilot",
-  "$15,000 custom business/private household install",
-];
+const mailtoSubjects = {
+  waitlist: "Join Waitlist",
+  foundingPreorder: "OffGrid AI Founding Preorder",
+  businessPilot: "Business Pilot Application",
+};
+
+const mailtoLink = (subject: string) =>
+  `${contactEmail}?subject=${encodeURIComponent(subject)}`;
 
 const steps = [
   "Reserve your place or apply for a pilot.",
@@ -44,7 +45,7 @@ export default function Home() {
             OFFGRID NATION
           </span>
           <a
-            href={`${contactEmail}?subject=OffGrid AI Waitlist`}
+            href={mailtoLink(mailtoSubjects.waitlist)}
             className="hidden rounded-full border border-emerald-300/30 px-4 py-2 text-sm font-medium text-emerald-100 transition hover:border-emerald-200/70 hover:bg-emerald-300/10 sm:inline-flex"
           >
             Join Waitlist
@@ -67,13 +68,13 @@ export default function Home() {
               Your files. Your device. No internet required.
             </p>
             <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-              <a className="rounded-full bg-white px-7 py-4 text-center font-semibold text-black transition hover:bg-emerald-100" href={`${contactEmail}?subject=OffGrid AI Waitlist`}>
+              <a className="rounded-full bg-white px-7 py-4 text-center font-semibold text-black transition hover:bg-emerald-100" href={mailtoLink(mailtoSubjects.waitlist)}>
                 Join Waitlist
               </a>
-              <a className="rounded-full border border-white/20 bg-white/[0.04] px-7 py-4 text-center font-semibold text-white transition hover:border-emerald-200/60 hover:bg-emerald-300/10" href={`${contactEmail}?subject=Reserve Personal Vault`}>
-                Reserve Personal Vault
+              <a className="rounded-full border border-white/20 bg-white/[0.04] px-7 py-4 text-center font-semibold text-white transition hover:border-emerald-200/60 hover:bg-emerald-300/10" href={mailtoLink(mailtoSubjects.foundingPreorder)}>
+                Reserve Founding Preorder
               </a>
-              <a className="rounded-full border border-sky-200/25 px-7 py-4 text-center font-semibold text-sky-100 transition hover:border-sky-200/70 hover:bg-sky-300/10" href={`${contactEmail}?subject=OffGrid AI Business Pilot`}>
+              <a className="rounded-full border border-sky-200/25 px-7 py-4 text-center font-semibold text-sky-100 transition hover:border-sky-200/70 hover:bg-sky-300/10" href={mailtoLink(mailtoSubjects.businessPilot)}>
                 Apply for Business Pilot
               </a>
             </div>
@@ -127,15 +128,38 @@ export default function Home() {
         <section className="grid gap-8 py-16 lg:grid-cols-[0.85fr_1.15fr]" id="pricing">
           <div>
             <p className="text-sm uppercase tracking-[0.35em] text-emerald-200/80">Pricing / Reservations</p>
-            <h2 className="mt-3 text-3xl font-semibold tracking-tight sm:text-5xl">Reserve now. Build privately.</h2>
-            <p className="mt-5 text-neutral-300">No Stripe yet. Email us to reserve a setup or request a pilot.</p>
+            <h2 className="mt-3 text-3xl font-semibold tracking-tight sm:text-5xl">Founding preorder is open.</h2>
+            <p className="mt-5 text-neutral-300">Reserve early access while OffGrid AI is being built.</p>
           </div>
-          <div className="grid gap-3">
-            {offerings.map((offering) => (
-              <div key={offering} className="rounded-2xl border border-white/10 bg-white/[0.05] p-5 text-lg text-neutral-100">
-                {offering}
-              </div>
-            ))}
+          <div className="rounded-[2rem] border border-emerald-300/20 bg-gradient-to-br from-emerald-300/10 via-white/[0.05] to-white/[0.03] p-6 shadow-2xl shadow-emerald-950/20">
+            <p className="text-sm uppercase tracking-[0.35em] text-emerald-200/80">
+              Founding preorder
+            </p>
+            <h3 className="mt-4 text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+              $499 Founding Preorder
+            </h3>
+            <p className="mt-5 text-lg leading-8 text-neutral-200">
+              Reserve early access to the first OffGrid AI private vault builds.
+            </p>
+            <p className="mt-4 font-medium text-emerald-100">
+              Credited toward your future setup.
+            </p>
+            <div className="mt-6 space-y-3 border-t border-white/10 pt-6 text-neutral-300">
+              <p>
+                Founding preorder is open while OffGrid AI is being built.
+              </p>
+              <p>
+                Reserve early access to a private local AI vault for your files,
+                family, or business.
+              </p>
+              <p>
+                Your $499 preorder is credited toward your future setup.
+              </p>
+              <p>
+                Final setup pricing depends on device, storage, file volume,
+                privacy needs, and installation scope.
+              </p>
+            </div>
           </div>
         </section>
 
@@ -157,15 +181,15 @@ export default function Home() {
         <section className="mb-12 rounded-[2rem] border border-white/10 bg-gradient-to-br from-emerald-300/10 via-white/[0.04] to-sky-300/10 p-8 text-center sm:p-12" id="contact">
           <p className="text-sm uppercase tracking-[0.35em] text-neutral-300">Contact</p>
           <h2 className="mt-4 text-3xl font-semibold tracking-tight sm:text-5xl">Build your private AI vault.</h2>
-          <p className="mx-auto mt-4 max-w-2xl text-neutral-300">Join the waitlist, reserve a Personal Vault, or apply for a Business Pilot with OffGrid Nation.</p>
+          <p className="mx-auto mt-4 max-w-2xl text-neutral-300">Join the waitlist, reserve a Founding Preorder, or apply for a Business Pilot with OffGrid Nation.</p>
           <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
-            <a className="rounded-full bg-white px-7 py-4 font-semibold text-black transition hover:bg-emerald-100" href={`${contactEmail}?subject=OffGrid AI Waitlist`}>
+            <a className="rounded-full bg-white px-7 py-4 font-semibold text-black transition hover:bg-emerald-100" href={mailtoLink(mailtoSubjects.waitlist)}>
               Join Waitlist
             </a>
-            <a className="rounded-full border border-white/20 px-7 py-4 font-semibold text-white transition hover:bg-white/10" href={`${contactEmail}?subject=Reserve Personal Vault`}>
-              Reserve Personal Vault
+            <a className="rounded-full border border-white/20 px-7 py-4 font-semibold text-white transition hover:bg-white/10" href={mailtoLink(mailtoSubjects.foundingPreorder)}>
+              Reserve Founding Preorder
             </a>
-            <a className="rounded-full border border-sky-200/25 px-7 py-4 font-semibold text-sky-100 transition hover:bg-sky-300/10" href={`${contactEmail}?subject=OffGrid AI Business Pilot`}>
+            <a className="rounded-full border border-sky-200/25 px-7 py-4 font-semibold text-sky-100 transition hover:bg-sky-300/10" href={mailtoLink(mailtoSubjects.businessPilot)}>
               Apply for Business Pilot
             </a>
           </div>
