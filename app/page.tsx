@@ -16,10 +16,10 @@ const mailtoLink = (subject: string) =>
   `${contactMailto}?subject=${encodeURIComponent(subject)}`;
 
 const steps = [
-  "Join the waitlist, reserve your place, or apply for a business pilot.",
-  "We confirm your device, storage, file library, and privacy needs.",
-  "Your local AI vault is configured for offline use after setup.",
-  "You keep ownership of the hardware, files, and system.",
+  "Join or reserve.",
+  "Confirm your files and device.",
+  "Build your local AI vault.",
+  "Keep ownership and control.",
 ];
 
 const paymentMethods = [
@@ -35,19 +35,19 @@ const paymentMethods = [
 const capabilityStats = [
   {
     value: "Offline",
-    label: "No internet required after setup",
+    label: "Offline after setup",
   },
   {
     value: "Multi-TB",
-    label: "Storage options for massive private libraries",
+    label: "Multi-terabyte libraries",
   },
   {
     value: "Custom",
-    label: "Vaults for people, families, and businesses",
+    label: "Personal, family, business",
   },
   {
     value: "Optional",
-    label: "Solar / off-grid power configurations",
+    label: "Off-grid power options",
   },
 ];
 
@@ -79,22 +79,22 @@ const faqs = [
   {
     question: "Does OffGrid AI need internet?",
     answer:
-      "No internet is required after setup for the local AI vault experience. Some installation, updates, or optional service steps may use internet during setup.",
+      "No internet is required after setup; installation or updates may use internet.",
   },
   {
     question: "Is this for personal, family, or business use?",
     answer:
-      "All three. OffGrid AI is custom-built for individuals, families, and businesses with private archives, records, SOPs, manuals, plans, and sensitive files.",
+      "All three: personal files, family records, and business documents.",
   },
   {
     question: "Do you provide the hardware?",
     answer:
-      "We can set up an existing laptop or build a custom portable vault device with multi-terabyte storage options and optional solar/off-grid power configurations.",
+      "Yes, or we can configure your existing device.",
   },
   {
     question: "Is this legal privacy?",
     answer:
-      "Yes. OffGrid AI is built for lawful privacy, self-owned systems, and responsible local AI use.",
+      "Yes, it is built for lawful privacy and responsible local AI use.",
   },
 ];
 
@@ -148,7 +148,7 @@ export default function Home() {
               Private AI that works without internet.
             </h1>
             <p className="mt-7 max-w-2xl text-lg leading-8 text-neutral-300 sm:text-xl">
-              Custom local AI vaults for individuals, families, and businesses — built around your files, your device, your privacy, and your need to work offline.
+              Custom local AI vaults for people, families, and businesses — built around your files, your device, and your need to work offline.
             </p>
             <p className="mt-5 text-base font-medium text-emerald-100">
               From Dallas to Davao. From Austin to Australia. Your files. Your device. No internet required.
@@ -174,10 +174,10 @@ export default function Home() {
               </div>
               <div className="space-y-4">
                 {[
-                  "No internet required after setup",
-                  "Private local AI vault",
-                  "Multi-terabyte storage options",
-                  "Optional solar / off-grid power",
+                  "No internet required",
+                  "Private local vault",
+                  "Multi-terabyte options",
+                  "Optional off-grid power",
                 ].map((item) => (
                   <div key={item} className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/[0.04] p-4">
                     <span className="h-2.5 w-2.5 rounded-full bg-emerald-300 shadow-[0_0_18px_rgba(110,231,183,0.9)]" />
@@ -199,14 +199,14 @@ export default function Home() {
         </section>
 
         <section className="grid gap-5 py-10 md:grid-cols-3" id="what-is-offgrid-ai">
-          <SectionCard eyebrow="What Is OffGrid AI?" title="A private local AI vault.">
-            Use AI with your own files on hardware you control, designed for lawful privacy, offline access after setup, and a cleaner break from cloud tools and algorithm-driven platforms.
+          <SectionCard eyebrow="What Is OffGrid AI?" title="A private AI vault.">
+            A private AI vault that runs locally on hardware you control.
           </SectionCard>
-          <SectionCard eyebrow="Personal + Family Vaults" title="For records, archives, and plans.">
-            Organize documents, notes, photos, family records, cabin plans, travel files, and private archives in a local AI workspace that stays on your device.
+          <SectionCard eyebrow="Personal + Family Vaults" title="Private archives, organized.">
+            For records, files, plans, photos, and private archives.
           </SectionCard>
-          <SectionCard eyebrow="Business Vault" title="For sensitive workflows.">
-            Give owners, operators, and teams a serious AI system for business documents, SOPs, manuals, training docs, contracts, policies, and offline planning.
+          <SectionCard eyebrow="Business Vault" title="Sensitive work, local.">
+            For SOPs, manuals, contracts, policies, and training docs.
           </SectionCard>
         </section>
 
@@ -229,7 +229,7 @@ export default function Home() {
           <div>
             <p className="text-sm uppercase tracking-[0.35em] text-emerald-200/80">Pricing / Reservations</p>
             <h2 className="mt-3 text-3xl font-semibold tracking-tight sm:text-5xl">Founding preorder is open.</h2>
-            <p className="mt-5 text-neutral-300">Reserve early access while OffGrid AI is being built.</p>
+            <p className="mt-5 text-neutral-300">Reserve early access.</p>
           </div>
           <div className="rounded-[2rem] border border-emerald-300/20 bg-gradient-to-br from-emerald-300/10 via-white/[0.05] to-white/[0.03] p-6 shadow-2xl shadow-emerald-950/20">
             <p className="text-sm uppercase tracking-[0.35em] text-emerald-200/80">
@@ -239,14 +239,13 @@ export default function Home() {
               $499 Founding Preorder
             </h3>
             <p className="mt-5 text-lg leading-8 text-neutral-200">
-              Reserve early access to the first OffGrid AI private vault builds.
-              Your preorder is credited toward your future setup. Founding
-              customers receive priority access and founder pricing, up to 30%
-              off the final custom build quote.
+              Reserve early access. Your preorder is credited toward your future
+              setup. Founding customers receive priority access and founder
+              pricing.
             </p>
             <p className="mt-6 border-t border-white/10 pt-6 text-neutral-300">
-              Final setup pricing depends on device, storage, file volume,
-              privacy needs, off-grid power options, and installation scope.
+              Final pricing depends on device, storage, files, power options,
+              and install scope.
             </p>
             <a
               className="mt-8 inline-flex rounded-full bg-white px-7 py-4 font-semibold text-black transition hover:bg-emerald-100"
@@ -278,7 +277,7 @@ export default function Home() {
         <section className="mb-12 rounded-[2rem] border border-white/10 bg-gradient-to-br from-emerald-300/10 via-white/[0.04] to-sky-300/10 p-8 text-center sm:p-12" id="contact">
           <p className="text-sm uppercase tracking-[0.35em] text-neutral-300">Contact</p>
           <h2 className="mt-4 text-3xl font-semibold tracking-tight sm:text-5xl">Build your private AI vault.</h2>
-          <p className="mx-auto mt-4 max-w-2xl text-neutral-300">Join the waitlist or reserve a Founding Preorder with OffGrid Nation.</p>
+          <p className="mx-auto mt-4 max-w-2xl text-neutral-300">Join the waitlist or reserve your founding preorder.</p>
           <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
             <WaitlistButton className="rounded-full bg-white px-7 py-4 font-semibold text-black transition hover:bg-emerald-100" onClick={() => setIsWaitlistOpen(true)} />
             <a
