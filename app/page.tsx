@@ -1,4 +1,5 @@
 const contactEmail = "mailto:falias1991@icloud.com";
+const stripePreorderLink = "https://buy.stripe.com/8x2bIU8HogZs7Ct0Lh5os00";
 
 const mailtoSubjects = {
   waitlist: "Join Waitlist",
@@ -71,7 +72,12 @@ export default function Home() {
               <a className="rounded-full bg-white px-7 py-4 text-center font-semibold text-black transition hover:bg-emerald-100" href={mailtoLink(mailtoSubjects.waitlist)}>
                 Join Waitlist
               </a>
-              <a className="rounded-full border border-white/20 bg-white/[0.04] px-7 py-4 text-center font-semibold text-white transition hover:border-emerald-200/60 hover:bg-emerald-300/10" href={mailtoLink(mailtoSubjects.foundingPreorder)}>
+              <a
+                className="rounded-full border border-white/20 bg-white/[0.04] px-7 py-4 text-center font-semibold text-white transition hover:border-emerald-200/60 hover:bg-emerald-300/10"
+                href={stripePreorderLink}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Reserve Founding Preorder
               </a>
               <a className="rounded-full border border-sky-200/25 px-7 py-4 text-center font-semibold text-sky-100 transition hover:border-sky-200/70 hover:bg-sky-300/10" href={mailtoLink(mailtoSubjects.businessPilot)}>
@@ -140,26 +146,22 @@ export default function Home() {
             </h3>
             <p className="mt-5 text-lg leading-8 text-neutral-200">
               Reserve early access to the first OffGrid AI private vault builds.
+              Your preorder is credited toward your future setup. Founding
+              customers receive priority access and founder pricing, up to 30%
+              off the final custom build quote.
             </p>
-            <p className="mt-4 font-medium text-emerald-100">
-              Credited toward your future setup.
+            <p className="mt-6 border-t border-white/10 pt-6 text-neutral-300">
+              Final setup pricing depends on device, storage, file volume,
+              privacy needs, off-grid power options, and installation scope.
             </p>
-            <div className="mt-6 space-y-3 border-t border-white/10 pt-6 text-neutral-300">
-              <p>
-                Founding preorder is open while OffGrid AI is being built.
-              </p>
-              <p>
-                Reserve early access to a private local AI vault for your files,
-                family, or business.
-              </p>
-              <p>
-                Your $499 preorder is credited toward your future setup.
-              </p>
-              <p>
-                Final setup pricing depends on device, storage, file volume,
-                privacy needs, and installation scope.
-              </p>
-            </div>
+            <a
+              className="mt-8 inline-flex rounded-full bg-white px-7 py-4 font-semibold text-black transition hover:bg-emerald-100"
+              href={stripePreorderLink}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Reserve Founding Preorder
+            </a>
           </div>
         </section>
 
@@ -186,7 +188,12 @@ export default function Home() {
             <a className="rounded-full bg-white px-7 py-4 font-semibold text-black transition hover:bg-emerald-100" href={mailtoLink(mailtoSubjects.waitlist)}>
               Join Waitlist
             </a>
-            <a className="rounded-full border border-white/20 px-7 py-4 font-semibold text-white transition hover:bg-white/10" href={mailtoLink(mailtoSubjects.foundingPreorder)}>
+            <a
+              className="rounded-full border border-white/20 px-7 py-4 font-semibold text-white transition hover:bg-white/10"
+              href={stripePreorderLink}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Reserve Founding Preorder
             </a>
             <a className="rounded-full border border-sky-200/25 px-7 py-4 font-semibold text-sky-100 transition hover:bg-sky-300/10" href={mailtoLink(mailtoSubjects.businessPilot)}>
