@@ -151,7 +151,7 @@ export default function Home() {
               Custom local AI vaults for individuals, families, and businesses — built around your files, your device, your privacy, and your need to work offline.
             </p>
             <p className="mt-5 text-base font-medium text-emerald-100">
-              Your files. Your device. No internet required.
+              From Dallas to Davao. From Austin to Australia. Your files. Your device. No internet required.
             </p>
             <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <WaitlistButton className="rounded-full bg-white px-7 py-4 text-center font-semibold text-black transition hover:bg-emerald-100" onClick={() => setIsWaitlistOpen(true)} />
