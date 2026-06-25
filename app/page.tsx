@@ -6,7 +6,29 @@ import { FormEvent, useMemo, useState } from "react";
 const contactEmail = "falias1991@icloud.com";
 const contactMailto = `mailto:${contactEmail}`;
 const stripePreorderLink = "https://buy.stripe.com/8x2bIU8HogZs7Ct0Lh5os00";
+const offgridLogoImagePath = "/images/offgrid/logo.png";
 const offgridSolarImagePath = "/images/offgrid/offgrid-solar.png";
+
+const atmosphereImages = [
+  {
+    src: "/images/offgrid/home-vibes.png",
+    alt: "Calm off-grid home setting",
+    width: 1448,
+    height: 1086,
+  },
+  {
+    src: "/images/offgrid/offgrid-antenna-signal.png",
+    alt: "Off-grid antenna signal in a remote landscape",
+    width: 1448,
+    height: 1086,
+  },
+  {
+    src: "/images/offgrid/offgrid-cliff.png",
+    alt: "Remote off-grid cliff landscape",
+    width: 1536,
+    height: 1024,
+  },
+];
 
 const mailtoSubjects = {
   waitlist: "OffGrid AI Waitlist Request",
@@ -114,13 +136,20 @@ export default function Home() {
   const [isWaitlistOpen, setIsWaitlistOpen] = useState(false);
 
   return (
-    <main className="min-h-screen overflow-hidden bg-black text-white">
+    <main id="top" className="min-h-screen overflow-hidden bg-black text-white">
       <div className="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(circle_at_top_left,rgba(34,197,94,0.18),transparent_34%),radial-gradient(circle_at_top_right,rgba(59,130,246,0.16),transparent_30%),linear-gradient(135deg,#020202,#111111_48%,#050505)]" />
       <div className="mx-auto flex w-full max-w-7xl flex-col px-5 py-6 sm:px-8 lg:px-10">
         <header className="flex items-center justify-between rounded-full border border-white/10 bg-white/[0.03] px-5 py-3 backdrop-blur">
-          <span className="text-sm font-semibold uppercase tracking-[0.28em] text-white">
-            OFFGRID NATION
-          </span>
+          <a className="inline-flex items-center" href="#top" aria-label="OffGrid Nation home">
+            <Image
+              className="h-10 w-10 rounded-full object-contain sm:h-11 sm:w-11"
+              src={offgridLogoImagePath}
+              alt="OffGrid Nation"
+              width={96}
+              height={96}
+              priority
+            />
+          </a>
           <a
             className="hidden rounded-full border border-emerald-300/30 px-4 py-2 text-sm font-medium text-emerald-100 transition hover:border-emerald-200/70 hover:bg-emerald-300/10 sm:inline-flex"
             href={stripePreorderLink}
@@ -198,6 +227,35 @@ export default function Home() {
               <p className="mt-2 text-sm leading-6 text-neutral-300">{stat.label}</p>
             </div>
           ))}
+        </section>
+
+        <section className="py-10" aria-label="OffGrid lifestyle images">
+          <div className="grid gap-4 md:grid-cols-[1.15fr_0.85fr]">
+            <article className="group overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.03] shadow-2xl shadow-black/25">
+              <Image
+                className="h-80 w-full object-cover transition duration-500 group-hover:scale-[1.02] lg:h-[28rem]"
+                src={atmosphereImages[0].src}
+                alt={atmosphereImages[0].alt}
+                width={atmosphereImages[0].width}
+                height={atmosphereImages[0].height}
+                sizes="(min-width: 768px) 58vw, 100vw"
+              />
+            </article>
+            <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-1">
+              {atmosphereImages.slice(1).map((image) => (
+                <article key={image.src} className="group overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.03] shadow-2xl shadow-black/20">
+                  <Image
+                    className="h-52 w-full object-cover transition duration-500 group-hover:scale-[1.02] lg:h-[13.5rem]"
+                    src={image.src}
+                    alt={image.alt}
+                    width={image.width}
+                    height={image.height}
+                    sizes="(min-width: 768px) 42vw, (min-width: 640px) 50vw, 100vw"
+                  />
+                </article>
+              ))}
+            </div>
+          </div>
         </section>
 
         <section className="grid gap-5 py-10 md:grid-cols-3" id="what-is-offgrid-ai">
