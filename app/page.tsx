@@ -256,9 +256,9 @@ export default function Home() {
 
         <section className="py-10" aria-label="OffGrid lifestyle images">
           <div className="grid gap-4 md:grid-cols-[1.15fr_0.85fr]">
-            <article className="group overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.03] shadow-2xl shadow-black/25">
+            <article className="overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.03] shadow-2xl shadow-black/25">
               <Image
-                className="h-80 w-full object-cover transition duration-500 group-hover:scale-[1.02] lg:h-[28rem]"
+                className="h-80 w-full object-cover lg:h-[28rem]"
                 src={atmosphereImages[0].src}
                 alt={atmosphereImages[0].alt}
                 width={atmosphereImages[0].width}
@@ -268,9 +268,9 @@ export default function Home() {
             </article>
             <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-1">
               {atmosphereImages.slice(1).map((image) => (
-                <article key={image.src} className="group overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.03] shadow-2xl shadow-black/20">
+                <article key={image.src} className="overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.03] shadow-2xl shadow-black/20">
                   <Image
-                    className="h-52 w-full object-cover transition duration-500 group-hover:scale-[1.02] lg:h-[13.5rem]"
+                    className="h-52 w-full object-cover lg:h-[13.5rem]"
                     src={image.src}
                     alt={image.alt}
                     width={image.width}
