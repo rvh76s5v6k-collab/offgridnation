@@ -3,7 +3,7 @@ export default function Home() {
     <main className="min-h-screen bg-black text-white">
       <section className="flex min-h-screen flex-col items-center justify-center px-6 text-center">
         <p className="mb-4 text-sm uppercase tracking-[0.4em] text-neutral-400">
-          OffGrid National
+          OffGrid Nation
         </p>
 
         <h1 className="max-w-4xl text-5xl font-bold tracking-tight md:text-7xl">
