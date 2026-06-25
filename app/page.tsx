@@ -1,10 +1,12 @@
 "use client";
 
+import Image from "next/image";
 import { FormEvent, useMemo, useState } from "react";
 
 const contactEmail = "falias1991@icloud.com";
 const contactMailto = `mailto:${contactEmail}`;
 const stripePreorderLink = "https://buy.stripe.com/8x2bIU8HogZs7Ct0Lh5os00";
+const offgridSolarImagePath = "/images/offgrid/offgrid-solar.png";
 
 const mailtoSubjects = {
   waitlist: "OffGrid AI Waitlist Request",
@@ -171,6 +173,16 @@ export default function Home() {
               <div className="mb-8 flex items-center justify-between text-sm text-neutral-400">
                 <span>LOCAL AI VAULT</span>
                 <span className="rounded-full bg-emerald-300/10 px-3 py-1 text-emerald-100">Offline Ready</span>
+              </div>
+              <div className="mb-6 overflow-hidden rounded-3xl border border-emerald-300/15 bg-white/[0.03]">
+                <Image
+                  className="h-56 w-full object-cover"
+                  src={offgridSolarImagePath}
+                  alt="OffGrid solar power setup"
+                  width={1536}
+                  height={1024}
+                  priority
+                />
               </div>
               <div className="space-y-4">
                 {[
