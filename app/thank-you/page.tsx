@@ -11,7 +11,7 @@ const preorderHighlights = [
   "We will review your preorder.",
   "Austin / OffGrid Nation will follow up about your use case, device needs, storage needs, and timeline.",
   "Your $499 preorder is credited toward your future setup.",
-  "Founding customers receive priority access and founder pricing, up to 30% off the final custom build quote.",
+  "Founding customers receive priority access and founder pricing.",
 ];
 
 export default function ThankYouPage() {

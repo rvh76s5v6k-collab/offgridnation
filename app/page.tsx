@@ -24,16 +24,6 @@ const steps = [
   "Keep ownership and control.",
 ];
 
-const paymentMethods = [
-  "Card",
-  "Apple Pay",
-  "Google Pay",
-  "Klarna",
-  "Link",
-  "Cash App Pay",
-  "Amazon Pay",
-];
-
 const capabilityStats = [
   {
     value: "Offline",
@@ -419,7 +409,7 @@ function WaitlistModal({ isOpen, onClose }: { isOpen: boolean; onClose: () => vo
             <textarea className="form-input min-h-32 resize-y" value={form.notes} onChange={(event) => updateField("notes", event.target.value)} />
           </FormField>
 
-          <div className="flex flex-col gap-3 border-t border-white/10 pt-5 sm:flex-row sm:items-center sm:justify-between">
+          <div className="sticky bottom-0 -mx-5 -mb-5 flex flex-col gap-3 border-t border-white/10 bg-[#070907]/95 px-5 py-4 backdrop-blur sm:-mx-7 sm:-mb-7 sm:flex-row sm:items-center sm:justify-between sm:px-7">
             <p className="text-xs leading-5 text-neutral-400">
               This will open your email app with a prefilled message to {contactEmail}.
             </p>
@@ -448,18 +438,8 @@ function PaymentTrustStrip({ className = "" }: { className?: string }) {
       className={`max-w-2xl rounded-2xl border border-emerald-300/15 bg-black/25 px-4 py-3 text-sm text-neutral-300 shadow-lg shadow-emerald-950/10 ${className}`}
     >
       <p className="font-medium text-emerald-100">
-        Secure checkout via Stripe
+        Secure checkout via Stripe.
       </p>
-      <div className="mt-2 flex flex-wrap gap-2">
-        {paymentMethods.map((method) => (
-          <span
-            key={method}
-            className="rounded-full border border-white/10 bg-white/[0.04] px-2.5 py-1 text-xs font-medium text-neutral-200"
-          >
-            {method}
-          </span>
-        ))}
-      </div>
     </div>
   );
 }
