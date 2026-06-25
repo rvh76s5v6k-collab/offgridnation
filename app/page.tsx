@@ -278,7 +278,7 @@ export default function Home() {
         <section className="mb-12 rounded-[2rem] border border-white/10 bg-gradient-to-br from-emerald-300/10 via-white/[0.04] to-sky-300/10 p-8 text-center sm:p-12" id="contact">
           <p className="text-sm uppercase tracking-[0.35em] text-neutral-300">Contact</p>
           <h2 className="mt-4 text-3xl font-semibold tracking-tight sm:text-5xl">Build your private AI vault.</h2>
-          <p className="mx-auto mt-4 max-w-2xl text-neutral-300">Join the waitlist, reserve a Founding Preorder, or apply for a Business Pilot with OffGrid Nation.</p>
+          <p className="mx-auto mt-4 max-w-2xl text-neutral-300">Join the waitlist or reserve a Founding Preorder with OffGrid Nation.</p>
           <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
             <WaitlistButton className="rounded-full bg-white px-7 py-4 font-semibold text-black transition hover:bg-emerald-100" onClick={() => setIsWaitlistOpen(true)} />
             <a
@@ -288,9 +288,6 @@ export default function Home() {
               rel="noopener noreferrer"
             >
               Reserve Founding Preorder
-            </a>
-            <a className="rounded-full border border-sky-200/25 px-7 py-4 font-semibold text-sky-100 transition hover:bg-sky-300/10" href={mailtoLink(mailtoSubjects.businessPilot)}>
-              Apply for Business Pilot
             </a>
           </div>
         </section>
@@ -363,7 +360,7 @@ function WaitlistModal({ isOpen, onClose }: { isOpen: boolean; onClose: () => vo
               Tell us about your private AI vault.
             </h2>
             <p className="mt-3 max-w-2xl text-sm leading-6 text-neutral-300">
-              No backend is connected yet. Submitting opens a prefilled email to OffGrid Nation with your answers.
+              Tell us what kind of private AI vault you want to build. We’ll follow up directly.
             </p>
           </div>
           <button className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-2 text-sm text-neutral-200 transition hover:border-emerald-200/60 hover:bg-emerald-300/10" type="button" onClick={onClose}>
