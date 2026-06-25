@@ -17,6 +17,16 @@ const steps = [
   "You keep ownership of the hardware, files, and system.",
 ];
 
+const paymentMethods = [
+  "Card",
+  "Apple Pay",
+  "Google Pay",
+  "Klarna",
+  "Link",
+  "Cash App Pay",
+  "Amazon Pay",
+];
+
 const faqs = [
   {
     question: "Does OffGrid AI need internet?",
@@ -84,6 +94,7 @@ export default function Home() {
                 Apply for Business Pilot
               </a>
             </div>
+            <PaymentTrustStrip className="mt-5" />
           </div>
 
           <div className="rounded-[2rem] border border-white/10 bg-gradient-to-br from-white/[0.10] to-white/[0.03] p-6 shadow-2xl shadow-emerald-950/30 backdrop-blur">
@@ -162,6 +173,7 @@ export default function Home() {
             >
               Reserve Founding Preorder
             </a>
+            <PaymentTrustStrip className="mt-5" />
           </div>
         </section>
 
@@ -203,6 +215,31 @@ export default function Home() {
         </section>
       </div>
     </main>
+  );
+}
+
+function PaymentTrustStrip({ className = "" }: { className?: string }) {
+  return (
+    <div
+      className={`max-w-2xl rounded-2xl border border-emerald-300/15 bg-black/25 px-4 py-3 text-sm text-neutral-300 shadow-lg shadow-emerald-950/10 ${className}`}
+    >
+      <p className="font-medium text-emerald-100">
+        Secure checkout via Stripe
+      </p>
+      <div className="mt-2 flex flex-wrap gap-2">
+        {paymentMethods.map((method) => (
+          <span
+            key={method}
+            className="rounded-full border border-white/10 bg-white/[0.04] px-2.5 py-1 text-xs font-medium text-neutral-200"
+          >
+            {method}
+          </span>
+        ))}
+      </div>
+      <p className="mt-2 text-xs leading-5 text-neutral-400">
+        Payment methods may vary by device, browser, and location.
+      </p>
+    </div>
   );
 }
 
