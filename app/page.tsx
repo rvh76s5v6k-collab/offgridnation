@@ -141,10 +141,10 @@ export default function Home() {
               Private AI that works without internet.
             </h1>
             <p className="mt-7 max-w-2xl text-lg leading-8 text-neutral-300 sm:text-xl">
-              Custom-built local AI vaults for individuals, families, and businesses. Use AI with your own private files, remote work materials, records, manuals, SOPs, and planning docs without relying on cloud tools after setup.
+              Custom local AI vaults for individuals, families, and businesses — built around your files, your device, your privacy, and your need to work offline.
             </p>
             <p className="mt-5 text-base font-medium text-emerald-100">
-              Your files. Your device. Multi-terabyte options. Optional off-grid power.
+              Your files. Your device. No internet required.
             </p>
             <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <WaitlistButton className="rounded-full bg-white px-7 py-4 text-center font-semibold text-black transition hover:bg-emerald-100" onClick={() => setIsWaitlistOpen(true)} />
@@ -156,11 +156,7 @@ export default function Home() {
               >
                 Reserve Founding Preorder
               </a>
-              <a className="rounded-full border border-sky-200/25 px-7 py-4 text-center font-semibold text-sky-100 transition hover:border-sky-200/70 hover:bg-sky-300/10" href={mailtoLink(mailtoSubjects.businessPilot)}>
-                Apply for Business Pilot
-              </a>
             </div>
-            <PaymentTrustStrip className="mt-5" />
           </div>
 
           <div className="rounded-[2rem] border border-white/10 bg-gradient-to-br from-white/[0.10] to-white/[0.03] p-6 shadow-2xl shadow-emerald-950/30 backdrop-blur">
@@ -172,9 +168,9 @@ export default function Home() {
               <div className="space-y-4">
                 {[
                   "No internet required after setup",
-                  "Built for massive private file libraries",
-                  "Remote work, private archives, SOPs, manuals, records",
-                  "Optional solar / off-grid power configurations",
+                  "Private local AI vault",
+                  "Massive storage options",
+                  "Optional solar / off-grid power",
                 ].map((item) => (
                   <div key={item} className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/[0.04] p-4">
                     <span className="h-2.5 w-2.5 rounded-full bg-emerald-300 shadow-[0_0_18px_rgba(110,231,183,0.9)]" />
@@ -449,9 +445,6 @@ function PaymentTrustStrip({ className = "" }: { className?: string }) {
           </span>
         ))}
       </div>
-      <p className="mt-2 text-xs leading-5 text-neutral-400">
-        Payment methods may vary by device, browser, and location.
-      </p>
     </div>
   );
 }
