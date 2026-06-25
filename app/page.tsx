@@ -129,7 +129,14 @@ export default function Home() {
           <span className="text-sm font-semibold uppercase tracking-[0.28em] text-white">
             OFFGRID NATION
           </span>
-          <WaitlistButton className="hidden rounded-full border border-emerald-300/30 px-4 py-2 text-sm font-medium text-emerald-100 transition hover:border-emerald-200/70 hover:bg-emerald-300/10 sm:inline-flex" onClick={() => setIsWaitlistOpen(true)} />
+          <a
+            className="hidden rounded-full border border-emerald-300/30 px-4 py-2 text-sm font-medium text-emerald-100 transition hover:border-emerald-200/70 hover:bg-emerald-300/10 sm:inline-flex"
+            href={stripePreorderLink}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Reserve Preorder
+          </a>
         </header>
 
         <section className="grid min-h-[86vh] items-center gap-12 py-20 lg:grid-cols-[1.1fr_0.9fr] lg:py-28">
@@ -169,7 +176,7 @@ export default function Home() {
                 {[
                   "No internet required after setup",
                   "Private local AI vault",
-                  "Massive storage options",
+                  "Multi-terabyte storage options",
                   "Optional solar / off-grid power",
                 ].map((item) => (
                   <div key={item} className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/[0.04] p-4">
