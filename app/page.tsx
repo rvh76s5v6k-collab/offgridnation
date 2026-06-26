@@ -33,31 +33,31 @@ const features = [
 const cards = [
   {
     title: "OffGrid Vault Box",
-    body: "Massive local storage. Private AI access.",
+    body: "Massive local storage and private local AI access in a hardened vault build for the files you cannot lose.",
     image: "/offgrid/tier-1-references/ai-boxes/1.png",
     alt: "Black and silver OffGrid vault hardware box",
   },
   {
     title: "Business Vault",
-    body: "Private AI for SOPs, contracts, manuals, and internal knowledge.",
+    body: "Private AI for SOPs, contracts, manuals, proposals, client records, and internal knowledge.",
     image: "/offgrid/tier-1-references/realistic-scene/1.png",
-    alt: "Realistic desk scene for a private business AI vault",
+    alt: "Business desk scene for a private OffGrid AI vault",
   },
   {
     title: "Field Deployment Kit",
-    body: "Drones, cameras, sensors, and local AI for remote site intelligence.",
+    body: "Drones, cameras, sensors, rugged storage, and local AI for remote site intelligence when the cloud is not there.",
     image: "/offgrid/extra-portfolio/field-ops-drone-hero.png",
     alt: "Field drone deployment kit in a remote environment",
   },
   {
     title: "Humanitarian + Education",
-    body: "A box can carry knowledge.",
+    body: "A portable knowledge vault for clinics, schools, villages, teams, and relief work in bandwidth-limited places.",
     image: "/offgrid/extra-portfolio/offgrid-village.png",
     alt: "OffGrid system used in a village setting",
   },
   {
     title: "Personal + Family Vault",
-    body: "Protect family records, photos, IDs, memories, and private files offline.",
+    body: "Protect family records, photos, IDs, memories, estate files, and private knowledge on your own device.",
     image: "/offgrid/extra-portfolio/home-background-image.png",
     alt: "Private family vault represented by a realistic home scene",
   },
@@ -87,9 +87,9 @@ const faqs = [
 export default function Home() {
   return (
     <main id="top" className="min-h-screen overflow-hidden bg-[#050505] text-white">
-      <div className="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(circle_at_50%_-10%,rgba(255,255,255,0.13),transparent_30%),linear-gradient(180deg,#0b0b0b_0%,#050505_46%,#010101_100%)]" />
+      <div className="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(circle_at_50%_-10%,rgba(255,255,255,0.14),transparent_30%),linear-gradient(180deg,#0b0b0b_0%,#050505_46%,#010101_100%)]" />
 
-      <header className="mx-auto flex w-full max-w-7xl items-center justify-between gap-5 px-5 py-5 sm:px-8 lg:px-10">
+      <header className="mx-auto flex w-full max-w-7xl items-center justify-between gap-5 px-5 py-4 sm:px-8 lg:px-10">
         <a className="flex items-center gap-3" href="#top" aria-label="OffGrid Nation home">
           <Image src="/offgrid/tier-1-references/logo/logo2.png" alt="OffGrid Nation logo" width={40} height={40} className="h-10 w-10 rounded-full object-contain" priority />
           <span className="text-sm font-semibold tracking-[0.32em] text-white sm:text-base">OFFGRID NATION</span>
@@ -104,10 +104,10 @@ export default function Home() {
         </a>
       </header>
 
-      <section className="mx-auto grid w-full max-w-7xl gap-12 px-5 pb-16 pt-12 sm:px-8 md:pt-20 lg:grid-cols-[0.95fr_1.05fr] lg:px-10 lg:pb-24" id="privacy">
+      <section className="mx-auto grid w-full max-w-7xl gap-10 px-5 pb-14 pt-6 sm:px-8 md:pt-10 lg:grid-cols-[0.92fr_1.08fr] lg:px-10 lg:pb-20 lg:pt-8" id="privacy">
         <div className="flex flex-col justify-center">
           <p className="text-xs font-semibold uppercase tracking-[0.42em] text-white/52">OFFGRID NATION PRESENTS OFFGRID AI</p>
-          <h1 className="mt-6 max-w-4xl text-5xl font-semibold leading-[0.95] tracking-[-0.065em] text-white sm:text-7xl lg:text-8xl">
+          <h1 className="mt-5 max-w-4xl text-5xl font-semibold leading-[0.95] tracking-[-0.065em] text-white sm:text-7xl lg:text-8xl">
             Private intelligence on hardware you control.
           </h1>
           <p className="mt-7 max-w-2xl text-lg leading-8 text-neutral-300">
@@ -121,12 +121,13 @@ export default function Home() {
             <a className="rounded-full border border-white/25 px-7 py-4 text-center text-sm font-bold uppercase tracking-[0.14em] text-white transition hover:border-white hover:bg-white/10" href="#solutions">Explore Solutions</a>
           </div>
         </div>
-        <div className="relative min-h-[420px] overflow-hidden rounded-[2rem] border border-white/10 bg-neutral-950 shadow-2xl shadow-black/60 lg:min-h-[640px]">
-          <Image src="/offgrid/sot-layover.png" alt="Premium dark OffGrid AI hardware visual direction" fill className="object-cover" sizes="(min-width: 1024px) 50vw, 100vw" priority />
-          <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0)_45%,rgba(0,0,0,0.78)_100%)]" />
-          <div className="absolute bottom-5 left-5 right-5 flex items-center justify-between rounded-2xl border border-white/10 bg-black/55 p-4 backdrop-blur">
+        <div className="relative min-h-[410px] overflow-hidden rounded-[2rem] border border-white/10 bg-neutral-950 shadow-2xl shadow-black/60 lg:min-h-[600px]">
+          <Image src="/offgrid/extra-portfolio/offgrid-cliff.png" alt="OffGrid field hardware deployed on a cliffside" fill className="object-cover" sizes="(min-width: 1024px) 50vw, 100vw" priority />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_72%_20%,rgba(255,255,255,0.2),transparent_24%),linear-gradient(180deg,rgba(0,0,0,0.03)_30%,rgba(0,0,0,0.82)_100%)]" />
+          <div className="absolute left-5 top-5 rounded-full border border-white/10 bg-black/45 px-4 py-2 text-[0.65rem] font-semibold uppercase tracking-[0.24em] text-white/70 backdrop-blur">Real OffGrid Field Image</div>
+          <div className="absolute bottom-5 left-5 right-5 flex items-center justify-between rounded-2xl border border-white/10 bg-black/60 p-4 backdrop-blur">
             <span className="text-xs uppercase tracking-[0.28em] text-white/62">Local AI Vault</span>
-            <span className="flex items-center gap-2 text-xs text-white/70"><span className="h-2 w-2 rounded-full bg-[#75d36a]" />Ready</span>
+            <span className="flex items-center gap-2 text-xs text-white/70"><span className="h-2 w-2 rounded-full bg-[#75d36a] shadow-[0_0_14px_rgba(117,211,106,0.75)]" />Ready</span>
           </div>
         </div>
       </section>
@@ -135,7 +136,7 @@ export default function Home() {
         <div className="grid overflow-hidden rounded-[1.75rem] border border-white/10 bg-white/[0.035] md:grid-cols-4">
           {features.map((feature) => (
             <div key={feature.title} className="border-white/10 p-6 md:border-r md:last:border-r-0">
-              <div className="mb-5 h-1.5 w-1.5 rounded-full bg-[#75d36a]" />
+              <div className="mb-5 h-1.5 w-1.5 rounded-full bg-[#75d36a] shadow-[0_0_12px_rgba(117,211,106,0.8)]" />
               <h2 className="text-xl font-semibold tracking-[-0.03em]">{feature.title}</h2>
               <p className="mt-3 text-sm leading-6 text-neutral-400">{feature.body}</p>
             </div>
