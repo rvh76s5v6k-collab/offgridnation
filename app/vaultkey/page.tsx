@@ -17,54 +17,42 @@ const productCards = [
     price: "$99",
     direction: "Clean silver starter",
     description: "A first-batch entry into local AI setup carrying for compatible Mac and Windows computers.",
-    shell: "bg-[linear-gradient(145deg,#ffffff,#eef0f3_48%,#c9ced6)]",
-    trim: "bg-slate-300",
-    chip: "bg-white/70",
+    image: "/offgrid/tier-1-references/vault-keys/1.png",
   },
   {
     name: "VaultKey Core",
     price: "$279",
     direction: "Black daily-use",
     description: "A dependable VaultKey tier for everyday private files, prompts, and local setup essentials.",
-    shell: "bg-[linear-gradient(145deg,#070707,#222225_52%,#52525b)]",
-    trim: "bg-zinc-500",
-    chip: "bg-white/12",
+    image: "/offgrid/tier-1-references/vault-keys/2.png",
   },
   {
     name: "VaultKey Pro",
     price: "$449",
     direction: "Modern silver",
     description: "A sharper pro tier for users who want an elevated carry kit and stronger upgrade path.",
-    shell: "bg-[linear-gradient(145deg,#ffffff,#e5e7eb_48%,#aeb7c4)]",
-    trim: "bg-zinc-400",
-    chip: "bg-white/75",
+    image: "/offgrid/tier-1-references/vault-keys/3.png",
   },
   {
     name: "VaultKey Studio",
     price: "$699",
     direction: "White modern-futuristic",
     description: "Built for creative workflows, studio libraries, prompt systems, and portable AI organization.",
-    shell: "bg-[linear-gradient(145deg,#ffffff,#f8fafc_48%,#d7dce3)]",
-    trim: "bg-slate-200",
-    chip: "bg-white/85",
+    image: "/offgrid/tier-1-references/vault-key-cases/1.png",
   },
   {
     name: "VaultKey Archive",
     price: "$999",
     direction: "White premium compact vault",
     description: "A compact vault direction for deeper personal archives, reference files, and long-term organization.",
-    shell: "bg-[linear-gradient(145deg,#fafaf9,#ffffff_45%,#d6d3d1)]",
-    trim: "bg-stone-300",
-    chip: "bg-white/80",
+    image: "/offgrid/tier-1-references/vault-key-cases/3.png",
   },
   {
     name: "VaultKey Titan",
     price: "$1499",
     direction: "White/gold flagship trim",
     description: "The flagship VaultKey expression with premium trim for the most complete carry experience.",
-    shell: "bg-[linear-gradient(145deg,#ffffff,#fff7ed_42%,#f5d58a_62%,#f5f3ff)]",
-    trim: "bg-amber-300",
-    chip: "bg-white/80",
+    image: "/offgrid/tier-1-references/vault-key-cases/5.png",
   },
 ];
 
@@ -119,16 +107,11 @@ export default function VaultKeyPage() {
                     <p className="text-2xl font-black tracking-[-0.04em] text-neutral-950">$99</p>
                   </div>
                 </div>
-                <div className="absolute left-1/2 top-[45%] h-48 w-72 -translate-x-1/2 -translate-y-1/2 rotate-[-12deg] rounded-[2rem] border border-white/80 bg-[linear-gradient(145deg,#ffffff,#eef0f3_46%,#bfc5ce)] shadow-[inset_0_1px_0_rgba(255,255,255,0.9),0_32px_80px_rgba(0,0,0,0.18)]">
-                  <div className="absolute inset-x-8 top-8 h-2 rounded-full bg-black/10" />
-                  <div className="absolute bottom-8 left-8 right-8 flex items-center justify-between">
-                    <div className="h-12 w-12 rounded-2xl border border-black/10 bg-white/65" />
-                    <div className="h-8 w-28 rounded-full border border-black/10 bg-white/55" />
-                  </div>
+                <div className="absolute left-1/2 top-[43%] h-72 w-[34rem] max-w-[88%] -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-[2rem]">
+                  <Image src="/offgrid/tier-1-references/vault-keys/1.png" alt="Silver OffGrid VaultKey product" fill className="object-contain drop-shadow-[0_34px_55px_rgba(0,0,0,0.24)]" sizes="(min-width: 1024px) 44vw, 90vw" priority />
                 </div>
-                <div className="absolute left-[60%] top-[44%] h-40 w-28 -translate-y-1/2 rotate-[14deg] rounded-[1.35rem] border border-black/10 bg-[linear-gradient(145deg,#111,#2a2a2d_55%,#707079)] shadow-[0_28px_70px_rgba(0,0,0,0.22)]">
-                  <div className="absolute left-1/2 top-5 h-16 w-12 -translate-x-1/2 rounded-xl border border-white/15 bg-white/10" />
-                  <div className="absolute bottom-5 left-1/2 h-3 w-14 -translate-x-1/2 rounded-full bg-white/20" />
+                <div className="absolute right-8 top-24 h-36 w-36 overflow-hidden rounded-[1.75rem] border border-black/10 bg-white/62 shadow-[0_24px_70px_rgba(0,0,0,0.12)] backdrop-blur-xl">
+                  <Image src="/offgrid/tier-1-references/vault-key-cases/2.png" alt="VaultKey carry case detail" fill className="object-cover" sizes="144px" />
                 </div>
               </div>
             </div>
@@ -168,11 +151,7 @@ export default function VaultKeyPage() {
               <article key={card.name} className="group rounded-[2.25rem] border border-black/10 bg-[#f8f8f5] p-6 shadow-[0_18px_70px_rgba(0,0,0,0.07)] transition hover:-translate-y-1 hover:shadow-[0_26px_90px_rgba(0,0,0,0.10)]">
                 <div className="relative h-44 overflow-hidden rounded-[1.75rem] border border-black/10 bg-[linear-gradient(145deg,#ffffff,#ededeb)]">
                   <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_20%,rgba(255,255,255,0.9),rgba(255,255,255,0)_58%)]" />
-                  <div className={`absolute left-1/2 top-1/2 h-24 w-52 -translate-x-1/2 -translate-y-1/2 rounded-[1.45rem] border border-white/70 ${card.shell} shadow-[inset_0_1px_0_rgba(255,255,255,0.78),0_22px_55px_rgba(0,0,0,0.18)]`}>
-                    <div className={`absolute left-5 top-5 h-9 w-9 rounded-xl border border-black/10 ${card.chip}`} />
-                    <div className={`absolute bottom-5 right-5 h-2 w-20 rounded-full ${card.trim}`} />
-                    <div className="absolute bottom-5 left-5 h-2 w-10 rounded-full bg-black/12" />
-                  </div>
+                  <Image src={card.image} alt={`${card.name} product`} fill className="object-contain p-4 drop-shadow-[0_22px_36px_rgba(0,0,0,0.18)] transition duration-300 group-hover:scale-105" sizes="(min-width: 1280px) 30vw, (min-width: 768px) 45vw, 90vw" />
                 </div>
                 <p className="mt-6 text-[0.65rem] font-black uppercase tracking-[0.24em] text-black/38">{card.direction}</p>
                 <div className="mt-3 flex items-start justify-between gap-4">

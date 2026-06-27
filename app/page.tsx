@@ -54,9 +54,20 @@ export default function Home() {
               <a className="rounded-full border border-black/15 bg-white/70 px-8 py-4 text-center text-sm font-black uppercase tracking-[0.14em] text-black transition hover:border-black/35 hover:bg-white" href="#vault-box">See AI Box</a>
             </div>
           </div>
-          <div className="relative mx-auto aspect-[2/3] w-full max-w-[560px] overflow-hidden rounded-[2.5rem] border border-white bg-white shadow-[0_45px_140px_rgba(0,0,0,0.22)]">
-            <Image src="/offgrid/home-creation/home-sot-no-text.png" alt="Premium white and silver OffGrid AI Box product direction" fill className="object-cover" sizes="(min-width: 1024px) 45vw, 100vw" priority />
-            <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.05),rgba(255,255,255,0)_48%,rgba(255,255,255,0.18))]" />
+          <div className="relative mx-auto w-full max-w-[620px] py-8" aria-label="OffGrid AI Box product visual">
+            <div className="absolute left-1/2 top-1/2 h-[34rem] w-[34rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-white/85 blur-3xl" />
+            <div className="relative overflow-hidden rounded-[2.75rem] border border-white bg-[linear-gradient(145deg,#ffffff,#ececea_54%,#d3d3cf)] p-6 shadow-[0_45px_140px_rgba(0,0,0,0.20)]">
+              <div className="relative min-h-[560px] overflow-hidden rounded-[2.25rem] border border-black/10 bg-[radial-gradient(circle_at_50%_18%,rgba(255,255,255,0.98),rgba(241,241,238,0.88)_44%,rgba(219,219,214,0.95)_100%)]">
+                <Image src="/offgrid/tier-1-references/ai-boxes/2.png" alt="White and silver OffGrid AI Box hardware" fill className="object-cover object-center mix-blend-multiply" sizes="(min-width: 1024px) 45vw, 100vw" priority />
+                <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.24),rgba(255,255,255,0)_45%,rgba(247,247,245,0.55))]" />
+                <div className="absolute left-6 top-6 rounded-full border border-black/10 bg-white/82 px-4 py-2 text-[0.65rem] font-black uppercase tracking-[0.22em] text-black/50 shadow-sm backdrop-blur-xl">Local AI appliance</div>
+                <div className="absolute bottom-6 left-6 right-6 grid gap-3 rounded-[1.75rem] border border-black/10 bg-white/78 p-5 shadow-[0_20px_70px_rgba(0,0,0,0.10)] backdrop-blur-xl sm:grid-cols-3">
+                  <div><p className="text-2xl font-black tracking-[-0.06em]">64 TB</p><p className="mt-1 text-[0.65rem] font-black uppercase tracking-[0.18em] text-black/42">Storage ready</p></div>
+                  <div><p className="text-2xl font-black tracking-[-0.06em]">Local</p><p className="mt-1 text-[0.65rem] font-black uppercase tracking-[0.18em] text-black/42">AI search</p></div>
+                  <div><p className="text-2xl font-black tracking-[-0.06em]">Yours</p><p className="mt-1 text-[0.65rem] font-black uppercase tracking-[0.18em] text-black/42">At home</p></div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
