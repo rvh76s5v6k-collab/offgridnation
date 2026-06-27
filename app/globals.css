@@ -12,13 +12,6 @@
   --font-mono: "Courier New", Courier, monospace;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
   background: var(--background);
   color: var(--foreground);
@@ -37,9 +30,9 @@ body {
 }
 
 .form-input:focus {
-  border-color: rgba(110, 231, 183, 0.75);
+  border-color: rgba(255, 255, 255, 0.72);
   background: rgba(255, 255, 255, 0.08);
-  box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.14);
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.12);
 }
 
 .form-input::placeholder {
