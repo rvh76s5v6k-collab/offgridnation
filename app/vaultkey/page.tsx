@@ -17,48 +17,54 @@ const productCards = [
     price: "$99",
     direction: "Clean silver starter",
     description: "A first-batch entry into local AI setup carrying for compatible Mac and Windows computers.",
-    finish: "from-zinc-50 via-slate-100 to-zinc-300",
-    accent: "border-slate-300/80",
+    shell: "bg-[linear-gradient(145deg,#ffffff,#eef0f3_48%,#c9ced6)]",
+    trim: "bg-slate-300",
+    chip: "bg-white/70",
   },
   {
     name: "VaultKey Core",
     price: "$279",
     direction: "Black daily-use",
     description: "A dependable VaultKey tier for everyday private files, prompts, and local setup essentials.",
-    finish: "from-neutral-950 via-zinc-800 to-neutral-600",
-    accent: "border-neutral-700",
+    shell: "bg-[linear-gradient(145deg,#070707,#222225_52%,#52525b)]",
+    trim: "bg-zinc-500",
+    chip: "bg-white/12",
   },
   {
     name: "VaultKey Pro",
     price: "$449",
     direction: "Modern silver",
     description: "A sharper pro tier for users who want an elevated carry kit and stronger upgrade path.",
-    finish: "from-white via-zinc-200 to-slate-400",
-    accent: "border-zinc-300",
+    shell: "bg-[linear-gradient(145deg,#ffffff,#e5e7eb_48%,#aeb7c4)]",
+    trim: "bg-zinc-400",
+    chip: "bg-white/75",
   },
   {
     name: "VaultKey Studio",
     price: "$699",
     direction: "White modern-futuristic",
     description: "Built for creative workflows, studio libraries, prompt systems, and portable AI organization.",
-    finish: "from-white via-sky-50 to-zinc-200",
-    accent: "border-white",
+    shell: "bg-[linear-gradient(145deg,#ffffff,#f8fafc_48%,#d7dce3)]",
+    trim: "bg-slate-200",
+    chip: "bg-white/85",
   },
   {
     name: "VaultKey Archive",
     price: "$999",
     direction: "White premium compact vault",
     description: "A compact vault direction for deeper personal archives, reference files, and long-term organization.",
-    finish: "from-stone-50 via-white to-zinc-300",
-    accent: "border-stone-200",
+    shell: "bg-[linear-gradient(145deg,#fafaf9,#ffffff_45%,#d6d3d1)]",
+    trim: "bg-stone-300",
+    chip: "bg-white/80",
   },
   {
     name: "VaultKey Titan",
     price: "$1499",
     direction: "White/gold flagship trim",
     description: "The flagship VaultKey expression with premium trim for the most complete carry experience.",
-    finish: "from-white via-amber-100 to-fuchsia-100",
-    accent: "border-amber-200",
+    shell: "bg-[linear-gradient(145deg,#ffffff,#fff7ed_42%,#f5d58a_62%,#f5f3ff)]",
+    trim: "bg-amber-300",
+    chip: "bg-white/80",
   },
 ];
 
@@ -102,9 +108,29 @@ export default function VaultKeyPage() {
           </div>
 
           <div className="relative mx-auto w-full max-w-2xl py-10" aria-label="VaultKey product visual">
-            <div className="absolute inset-8 rounded-[3rem] bg-white/70 blur-2xl" />
-            <div className="relative overflow-hidden rounded-[3rem] border border-white bg-[linear-gradient(145deg,#ffffff,#e5e5df)] p-5 shadow-[0_38px_120px_rgba(20,20,20,0.16)]">
-              <Image src="/offgrid/vaultkey-ai/vaultkey-sot-no-text.png" alt="VaultKey product visual in black, white, and silver" width={1200} height={900} className="h-auto w-full rounded-[2.35rem] object-contain" priority />
+            <div className="absolute inset-8 rounded-[3rem] bg-white/80 blur-2xl" />
+            <div className="relative overflow-hidden rounded-[3rem] border border-white bg-[linear-gradient(145deg,#ffffff,#e8e8e2)] p-6 shadow-[0_38px_120px_rgba(20,20,20,0.16)]">
+              <div className="relative min-h-[430px] rounded-[2.35rem] border border-black/10 bg-[radial-gradient(circle_at_50%_18%,rgba(255,255,255,0.96),rgba(237,237,231,0.88)_42%,rgba(209,209,202,0.9)_100%)] p-8">
+                <div className="absolute left-8 top-8 rounded-full border border-black/10 bg-white/80 px-4 py-2 text-[0.65rem] font-black uppercase tracking-[0.22em] text-black/50 shadow-sm">Pocket local AI kit</div>
+                <div className="absolute bottom-8 left-8 right-8 rounded-[1.75rem] border border-black/10 bg-white/72 p-5 shadow-[0_20px_70px_rgba(0,0,0,0.10)] backdrop-blur-xl">
+                  <p className="text-xs font-black uppercase tracking-[0.24em] text-black/40">VaultKey Founding Edition</p>
+                  <div className="mt-3 flex items-end justify-between gap-4">
+                    <p className="text-3xl font-black tracking-[-0.06em] text-neutral-950">Plug in. Set up.</p>
+                    <p className="text-2xl font-black tracking-[-0.04em] text-neutral-950">$99</p>
+                  </div>
+                </div>
+                <div className="absolute left-1/2 top-[45%] h-48 w-72 -translate-x-1/2 -translate-y-1/2 rotate-[-12deg] rounded-[2rem] border border-white/80 bg-[linear-gradient(145deg,#ffffff,#eef0f3_46%,#bfc5ce)] shadow-[inset_0_1px_0_rgba(255,255,255,0.9),0_32px_80px_rgba(0,0,0,0.18)]">
+                  <div className="absolute inset-x-8 top-8 h-2 rounded-full bg-black/10" />
+                  <div className="absolute bottom-8 left-8 right-8 flex items-center justify-between">
+                    <div className="h-12 w-12 rounded-2xl border border-black/10 bg-white/65" />
+                    <div className="h-8 w-28 rounded-full border border-black/10 bg-white/55" />
+                  </div>
+                </div>
+                <div className="absolute left-[60%] top-[44%] h-40 w-28 -translate-y-1/2 rotate-[14deg] rounded-[1.35rem] border border-black/10 bg-[linear-gradient(145deg,#111,#2a2a2d_55%,#707079)] shadow-[0_28px_70px_rgba(0,0,0,0.22)]">
+                  <div className="absolute left-1/2 top-5 h-16 w-12 -translate-x-1/2 rounded-xl border border-white/15 bg-white/10" />
+                  <div className="absolute bottom-5 left-1/2 h-3 w-14 -translate-x-1/2 rounded-full bg-white/20" />
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -140,9 +166,13 @@ export default function VaultKeyPage() {
           <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
             {productCards.map((card) => (
               <article key={card.name} className="group rounded-[2.25rem] border border-black/10 bg-[#f8f8f5] p-6 shadow-[0_18px_70px_rgba(0,0,0,0.07)] transition hover:-translate-y-1 hover:shadow-[0_26px_90px_rgba(0,0,0,0.10)]">
-                <div className={`relative h-44 overflow-hidden rounded-[1.75rem] border ${card.accent} bg-gradient-to-br ${card.finish}`}>
-                  <div className="absolute left-1/2 top-1/2 h-24 w-52 -translate-x-1/2 -translate-y-1/2 rounded-[1.4rem] border border-white/70 bg-white/22 shadow-[inset_0_1px_0_rgba(255,255,255,0.75),0_22px_55px_rgba(0,0,0,0.18)] backdrop-blur-sm" />
-                  <div className="absolute left-1/2 top-1/2 h-14 w-36 -translate-x-1/2 -translate-y-1/2 rounded-[1rem] border border-black/10 bg-white/35" />
+                <div className="relative h-44 overflow-hidden rounded-[1.75rem] border border-black/10 bg-[linear-gradient(145deg,#ffffff,#ededeb)]">
+                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_20%,rgba(255,255,255,0.9),rgba(255,255,255,0)_58%)]" />
+                  <div className={`absolute left-1/2 top-1/2 h-24 w-52 -translate-x-1/2 -translate-y-1/2 rounded-[1.45rem] border border-white/70 ${card.shell} shadow-[inset_0_1px_0_rgba(255,255,255,0.78),0_22px_55px_rgba(0,0,0,0.18)]`}>
+                    <div className={`absolute left-5 top-5 h-9 w-9 rounded-xl border border-black/10 ${card.chip}`} />
+                    <div className={`absolute bottom-5 right-5 h-2 w-20 rounded-full ${card.trim}`} />
+                    <div className="absolute bottom-5 left-5 h-2 w-10 rounded-full bg-black/12" />
+                  </div>
                 </div>
                 <p className="mt-6 text-[0.65rem] font-black uppercase tracking-[0.24em] text-black/38">{card.direction}</p>
                 <div className="mt-3 flex items-start justify-between gap-4">
